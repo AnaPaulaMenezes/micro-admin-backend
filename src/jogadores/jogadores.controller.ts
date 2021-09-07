@@ -36,7 +36,9 @@ export class JogadoresController {
 
       if (filterAckError.length > 0) {
         await channel.ack(originalMsg);
+        return
       }
+      await channel.nack(originalMsg)
     }
   }
 
@@ -59,7 +61,9 @@ export class JogadoresController {
 
       if (filterAckError.length > 0) {
         await channel.ack(originalMsg);
+        return
       }
+      await channel.nack(originalMsg)
     }
   }
 
@@ -100,7 +104,9 @@ export class JogadoresController {
 
       if (filterAckError.length > 0) {
         await channel.ack(originalMsg);
+        return
       }
+      await channel.nack(originalMsg)
     }
   }
 }
